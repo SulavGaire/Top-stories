@@ -1,0 +1,24 @@
+{
+  "name": "top-stories",
+  "version": "1.0.0",
+  "description": "Frontend of Top stories component",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npm i && gulp",
+    "dev": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^9.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-webp": "^5.0.0",
+    "sass": "^1.77.2"
+  }
+}
