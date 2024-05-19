@@ -1,5 +1,5 @@
 # Top-stories
-
+[Final Product](https://sulavgaire.github.io/Top-stories/)
 ![Top-stories](<Test_Task_.... (1).jpeg>)
 
 ## Build Tools
@@ -22,5 +22,16 @@
      Implement schema markup for the articles.
 
 ## Setup
+- clone the repo
+- open terminal and run
+` npm run start`
+- visit to http://localhost:3000/
 
-` npm i`
+## References 
+- [Gulp setup](https://www.youtube.com/watch?v=ubHwScDfRQA&t=3s)
+- [CSS Grid](https://www.youtube.com/watch?v=rg7Fvvl3taU)
+- [SEO check](https://validator.schema.org/)
+- [SEO guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)
+
+## note
+Had alot fun doing this, learned alot. This was the `TECH CENTRAL - TEST TASK` for the position of `Senior Front-End Developer` completed with in 24 hrs.🤞
