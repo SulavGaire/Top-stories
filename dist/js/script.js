@@ -1,0 +1,1 @@
+function validateEmail(e){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(e).toLowerCase())}document.getElementById("newsletterForm").addEventListener("submit",(function(e){e.preventDefault();var t=document.getElementById("email").value;validateEmail(t)?(console.log(t),alert("Thank you for signing up!")):alert("Please enter a valid email address.")}));
