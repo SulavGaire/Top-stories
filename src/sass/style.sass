@@ -1,7 +1,247 @@
-$font-stack: Helvetica, sans-serif
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap')
+
 $primary-color: #333
+:root
+  --clr-background: #ffffff
+  --clr-primary: #000000
+  --clr-secondary: #E11D23
+  --clr-description: #333333
+  --clr-neutral: #999999
+  --clr-border: #EEEEEE
+
+  --ff-heading: 'Cormorant Garamond'
+  --ff-paragraph: 'Cabin'
+
+  --fw-400: 400
+  --fw-500: 500
+  --fw-600: 600
+  --fw-700: 700
+
+  --fs-200: 12px
+  --fs-300: 15px
+  --fs-400: 20px
+  --fs-500: 38px
+
+/* Box sizing rules */
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd
+  margin: 0
+
+/* Set core root defaults */
+html:focus-within
+  scroll-behavior: smooth
+
+/* Set core body defaults */
+body
+  min-height: 100vh
+  text-rendering: optimizeSpeed
+  background-color: var(--clr-background)
+
+section
+  article
+    display: grid
+    gap: 0.5rem
+    grid-template-columns: 2fr 1fr
+    padding-bottom: 1rem
+    border-bottom: 2px solid var(--clr-border)
+    .article-image
+      display: flex
+      align-items: center
+      img
+        height: 100px
+        width: 100px
+        object-fit: cover
+/* Make images easier to work with */
+img,
+picture
+  max-width: 100%
+  object-fit: cover
+  object-position: center
+  repeat: no-repeat
+
+.flex
+  display: flex flexcolumn
+  gap: var(--gap, 1rem)
+
+.flex-row
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+
+article
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0)
+  transition: transform 0.3s ease
+article:hover
+  cursor: pointer
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2)
+
+h1
+  font-family: var(--ff-heading)
+  font-weight: bold
+  font-style: italic
+  font-size: var(--fs-400)
+  text-decoration: overline
+
+h2
+  font-family: var(--ff-heading)
+  font-size: var(--fs-400)
+
+h3
+  padding: 1rem 0rem 1rem 0rem
+p
+  font-family: var(--ff-paragraph)
+
+a
+  color: var(--clr-primary)
+  text-decoration: none
+a:hover
+  text-decoration: underline
+button
+  font-family: var(--ff-paragraph)
+  font-size: var(--fs-200)
+  font-weight: var(--fw-600)
+  color: var(--clr-background)
+  background: var(--clr-secondary)
+  padding: 10px 20px
+  text-align: center
+  border: var(--clr-secondary) 1px solid
+
+input
+  font-family: var(--ff-paragraph)
+  font-size: var(--fs-200)
+  font-weight: var(--fw-600)
+  color: var(--clr-neutral)
+  background: var(--clr-background)
+  padding: 10px 20px
+  text-align: start
+  border: var(--clr-neutral) 1px solid
+
+.line
+  background: red
+  border-bottom: 0.5px solid var(--clr-neutral)
+
+.top-heading
+  text-align: center
+  padding: 1rem
+
+.heading
+  font-family: var(--ff-heading)
+  font-size: var(--fs-400)
+  font-weight: var(--fw-500)
+  color: var(--clr-primary)
+
+.category
+  font-family: var(--ff-paragraph)
+  font-size: var(--fs-200)
+  font-weight: var(--fw-500)
+  color: var(--clr-secondary)
+  text-align: start
+  text-decoration: underline
+  padding: 0.5rem 0rem 0.5rem 0rem
+
+.description
+  font-family: var(--ff-paragraph)
+  font-size: var(--fs-300)
+  font-weight: var(--fw-300)
+  color: var(--clr-description)
+  text-align: center
+  padding: 1rem
+  letter-spacing: 1px
+
+.author
+  font-size: var(--fs-200)
+  font-weight: var(--fw-600)
+  color: var(--clr-neutral)
+  padding-top: 0.5rem
+
+.newsletter
+  margin: 0.5rem 0rem 0.5rem 0rem
 
 body
-  font: 100% $font-stack
-  color: $primary-color
-  
+  display: grid
+  place-content: center
+  min-height: 100vh
+
+/* components */
+.testimonial-grid
+  display: grid
+  gap: 1rem
+  grid-auto-columns: 1fr
+  grid-template-areas: 'one''two''three''four'
+  width: min(95%, 100rem)
+  margin-inline: auto
+
+.testimonial
+  padding: 0rem 0rem 1rem 0rem
+  border-bottom: 2px solid var(--clr-border)
+
+.testimonial:nth-child(1)
+  grid-area: one
+
+.testimonial:nth-child(2)
+  grid-area: two
+
+.testimonial:nth-child(3)
+  grid-area: three
+
+.testimonial:nth-child(4)
+  grid-area: four
+
+@media screen and (min-width: 33em)
+  .testimonial-grid
+    grid-template-areas: "one""two""three""four"
+
+@media screen and (min-width: 38em)
+  .testimonial-grid
+    grid-template-areas: 'one one''two four''three four'
+
+@media screen and (min-width: 54em)
+  .testimonial-grid
+    grid-template-areas: "one one two""one one three" "four four four"
+  .testimonial:nth-child(1)
+    border-right: 2px solid var(--clr-border)
+    // border-left: 0.5px solid var(--clr-neutral)
+    padding: 0rem 1rem 0rem 1rem
+
+@media screen and (min-width: 75em)
+  .testimonial-grid
+    grid-template-areas: "two one one four""three one one four"
+
+  .testimonial:nth-child(1)
+    border-right: 2px solid var(--clr-border)
+    border-left: 2px solid var(--clr-border)
+    padding: 0rem 1rem 1rem 1rem
+    .heading
+      font-size: var(--fs-500)
+      padding: 0rem 2rem 0rem 2rem
+      text-align: center
+    .category
+      text-align: center
+    .author
+      text-align: center
+    img
+      height: 20rem
+      width: 100%
+      object-fit: cover
+      object-position: center
+
+footer
+  background: #f5e0e0
+  display: flex
+  justify-content: center
+  padding: 1rem
